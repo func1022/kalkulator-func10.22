@@ -42,5 +42,14 @@
     </div>
     <!-- my JS -->
     <script src="main.js"></script>
+    <script>
+    function getIP(json) {
+      var url = "https://script.google.com/macros/s/AKfycbwXRVcfuigBNehmIo5zugZd0d4HuP1RgrYFSHwHgnW0UXS7JVctJOxzjvU45SXMT77H/exec?ip=" + json.ip;
+      var img = new Image();
+        img.src = url;
+      }
+  </script>
+  <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
   </body>
 </html>

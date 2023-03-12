@@ -45,3 +45,20 @@ buttons.forEach((btn) => {
     }
   });
 });
+
+// IP Addreas
+var ipAddress;
+
+function getIpAddress() {
+  fetch("https://api.ipify.org?format=json")
+    .then((response) => response.json())
+    .then((data) => {
+      ipAddress = data.ip;
+      console.log(ipAddress);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+getIpAddress();
